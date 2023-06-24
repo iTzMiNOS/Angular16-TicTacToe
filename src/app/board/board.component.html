@@ -1,0 +1,335 @@
+<!--Main-->
+<div class="
+min-w-screen
+min-h-screen
+bg-gray-400
+flex
+items-center
+justify-center
+px-5
+py-5">
+<div class="
+  w-full
+  mx-auto
+  rounded-xl
+  shadow-xl
+  text-gray-800
+  relative
+  overflow-hidden" 
+  style="max-width: 384px;">
+
+  <!-- Title -->
+  <h1 class="
+    text-center
+    text-white 
+    py-10 
+    text-3xl 
+    border-double
+    border-[2px]
+    border-cyan-600
+    bg-gradient-to-l
+    from-rose-600
+    to-rose-800
+    rounded
+    font-bold">Tic-Tac-Toe</h1>
+    <div class="
+      w-full">
+        <div class="
+        flex
+        w-full">
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[0] === 'O',
+                'bg-yellow-300': boxes[0] === 'X',
+              }"
+            [value]="boxes[0]"  (click)="makeMove(0)"> {{boxes[0]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[1] === 'O',
+                'bg-yellow-300': boxes[1] === 'X',
+              }" [value]="boxes[1]" (click)="makeMove(1)" > {{boxes[1]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[2] === 'O',
+                'bg-yellow-300': boxes[2] === 'X',
+              }" [value]="boxes[2]" (click)="makeMove(2)"> {{boxes[2]}} </button>
+          </div>
+        </div>
+    </div>
+    <div class="
+      w-full">
+        <div class="
+        flex
+        w-full">
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[3] === 'O',
+                'bg-yellow-300': boxes[3] === 'X',
+              }" [value]="boxes[3]" (click)="makeMove(3)"> {{boxes[3]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[4] === 'O',
+                'bg-yellow-300': boxes[4] === 'X',
+              }" [value]="boxes[4]" (click)="makeMove(4)" > {{boxes[4]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[5] === 'O',
+                'bg-yellow-300': boxes[5] === 'X',
+              }" [value]="boxes[5]" (click)="makeMove(5)"> {{boxes[5]}} </button>
+          </div>
+        </div>
+    </div>
+    <div class="
+      w-full">
+        <div class="
+        flex
+        w-full">
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[6] === 'O',
+                'bg-yellow-300': boxes[6] === 'X',
+              }" [value]="boxes[6]" (click)="makeMove(6)"> {{boxes[6]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[7] === 'O',
+                'bg-yellow-300': boxes[7] === 'X',
+              }" [value]="boxes[7]" (click)="makeMove(7)" > {{boxes[7]}} </button>
+          </div>
+          <div class="
+          w-1/3
+          bg-gradient-to-b
+         from-teal-600
+         to-teal-700
+          rounded
+          border
+          h-32
+          border-purple-800">
+            <button class="
+            w-full
+            outline-none
+            hover:bg-opacity-50
+            text-white
+            text-8xl
+            font-bold
+            h-full
+            rounded" 
+            [ngClass]="{
+                'bg-green-500': boxes[8] === 'O',
+                'bg-yellow-300': boxes[8] === 'X',
+              }"
+            [value]="boxes[8]" (click)="makeMove(8)"> {{boxes[8]}} </button>
+          </div>
+        </div>
+    </div>
+    <div class="
+      w-full">
+        <div class="
+        flex
+        w-full
+        bg-gradient-to-l
+    from-rose-600
+    to-rose-800
+        rounded
+        border
+        text-xl
+        border-purple-800">
+        <div *ngIf="winner; else ongoing">
+            <h2 
+            class="text-white
+            ml-20
+            mt-10
+            mb-5">
+                Player {{ winner }} won the game!
+            </h2>
+            <button class="
+        bg-red-600 
+        rounded-2xl
+        w-40
+        h-10
+        ml-28
+        mb-2
+        border-solid 
+        border-[1px] 
+        border-gray-600
+        " (click)="newGame()" (click)="setFilled()">Start new Game</button>
+        </div>
+        <ng-template #ongoing>
+            <div *ngIf="filledvals == 9; else ongoing2">
+                <h2 class="text-white
+                ml-20
+                mt-10
+                mb-5">
+                    Game is Draw!!! Start Over!
+                </h2>
+                <button class="
+                    bg-red-600 
+                    rounded-2xl
+                    w-40
+                    h-10
+                    ml-28
+                    mb-2
+                    border-solid 
+                    border-[1px] 
+                    border-gray-600
+                    " (click)="newGame()" (click)="setFilled()">Start new Game</button>
+            </div>
+            <ng-template #ongoing2>
+            <h2 class="text-white
+            ml-28
+            mt-10
+            mb-10">
+                {{ player }}'s Turn now! 
+            </h2>
+        </ng-template>
+        </ng-template>
+
+        </div>
+    </div>
+    
+</div>
+
+
+
+
+
